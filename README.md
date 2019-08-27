@@ -46,6 +46,37 @@ Se puede hacer un grid dentro de otro grid.
 Una propuedad pendiente es subgrid en un display que herede los valores predefinidos.
 
 ## Espaciado entre los elementos
+Columnas: grid-column-gap: valor;
+Filas: grid-row-gap: valor;
+ambos: grid-gap: valor;
+
+## Unidades de Medida 
+Se agrega fr (fraccion) 
+Se puede utilizar el valor repeat
+repeat (4, 1fr)
+se pueden establecer minimo y maximos
+repeat(4,(minmax(200px, 1fr))
+
+## Areas de Contenido
+se declaran por medio de 
+grid-template-areas: nombres de las areas separados por comillas
+se invocan en las clases con grid area
+
+## Modificando altos y anchos
+en el caso de las filas 
+grid-column-start: fila en la que inicia;
+grid-column-end: fila en la que termina;
+forma resumida
+grid-column: 2 / span 2; le decimos que ocupe dos valores es cuando ignoranmos cuanto es el ancho de nuestro grid, mantiene mas dinamico y congruente el diseño
+grid-column: 2 / 4;
+
+aplica de igual forma a las columnas
+grid-column: 2 / 4;
+
+en conjunto se ve asi: 
+
+grid-column:4 / span 2;
+grid-row: 5 / span 2;
 
 
 ```
