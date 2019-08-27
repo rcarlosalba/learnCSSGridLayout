@@ -8,13 +8,39 @@
     background: #23475b;
     color: white;
     padding: 32px;
+    display: grid;
+    grid-template-columns: minmax(auto, 1024px);
+    justify-content: center;
+}
+.hero-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 70px 1fr 320px;
+    grid-template-areas: "badge title formulario" 
+                         ". description formulario" 
+                         ". countdown formulario";
+}
+.badge{
+    grid-area: badge;
+}
+.badge img{
+    max-width: 70px;
+}
+.description{
+    grid-area: description;
+}
+.countdown{
+    grid-area: countdown;
 }
 .title{
+    grid-area: title;
     font-size: 36px;
     display: flex;
     align-items: center;
 }
 .formulario{
+    grid-area: formulario;
+    margin: 20px 0;
     text-align: center;
     background: rgba(255,255,255,.9);
     padding: 1.5em;
@@ -42,4 +68,30 @@
     border-bottom: 5px solid #6d932b;
     display: inline-block;
     font-size: 16px;
+}
+.countdown p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.countdown span{
+    font-size: 32px;
+}
+.countdown span::after{
+    content: ':';
+    display: inline-block;
+    margin: 0 5px;
+}
+.countdown span:last-child::after{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    .hero-container{
+        grid-template-columns: 70px 1fr;
+        grid-template-areas: "badge title " 
+                             "description description " 
+                             "formulario formulario"
+                             "countdown countdown ";
+    }
 }
