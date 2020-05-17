@@ -77,11 +77,3 @@ en conjunto se ve asi:
 
 grid-column:4 / span 2;
 grid-row: 5 / span 2;
-
-
-```
-<html>
-
-</html>
-
-```
